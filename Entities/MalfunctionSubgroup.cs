@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class MalfunctionSubgroup : IEntity
+    public partial class MalfunctionSubgroup
     {
+        public MalfunctionSubgroup()
+        {
+            Malfunction = new HashSet<Malfunction>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public int? MalfunctionGroupId { get; set; }
+        public int MalfunctionGroupId { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }

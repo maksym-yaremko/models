@@ -1,14 +1,14 @@
 ﻿using System;
-using TransIT.DAL.Models.Entities.Abstractions;
+using System.Collections.Generic;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class Bill : IEntity
+    public partial class Bill
     {
         public int Id { get; set; }
         public decimal? Sum { get; set; }
         public int? DocumentId { get; set; }
-        public int? IssueId { get; set; }
+        public int IssueId { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class ActionType : IEntity
+    public partial class ActionType
     {
         public ActionType()
         {
             IssueLog = new HashSet<IssueLog>();
+            Transition = new HashSet<Transition>();
         }
 
         public int Id { get; set; }
@@ -17,6 +17,7 @@ namespace TransIT.DAL.Models.Entities
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }
         public int? ModId { get; set; }
+        public bool IsFixed { get; set; }
 
         public virtual User Create { get; set; }
         public virtual User Mod { get; set; }

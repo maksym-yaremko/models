@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class User : IEntity
+    public partial class User
     {
         public User()
         {
@@ -40,6 +39,8 @@ namespace TransIT.DAL.Models.Entities
             SupplierMod = new HashSet<Supplier>();
             TokenCreate = new HashSet<Token>();
             TokenMod = new HashSet<Token>();
+            TransitionCreate = new HashSet<Transition>();
+            TransitionMod = new HashSet<Transition>();
             VehicleCreate = new HashSet<Vehicle>();
             VehicleMod = new HashSet<Vehicle>();
             VehicleTypeCreate = new HashSet<VehicleType>();
@@ -55,11 +56,11 @@ namespace TransIT.DAL.Models.Entities
         public string Login { get; set; }
         public string Password { get; set; }
         public int RoleId { get; set; }
-        public bool? IsActive { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }
         public int? ModId { get; set; }
+        public bool? IsActive { get; set; }
 
         public virtual User Create { get; set; }
         public virtual User Mod { get; set; }

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class Document : IEntity
+    public partial class Document
     {
         public Document()
         {
@@ -19,6 +18,7 @@ namespace TransIT.DAL.Models.Entities
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }
         public int? ModId { get; set; }
+        public string Path { get; set; }
 
         public virtual User Create { get; set; }
         public virtual IssueLog IssueLog { get; set; }

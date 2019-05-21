@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class Currency : IEntity
+    public partial class Currency
     {
         public Currency()
         {
@@ -21,7 +20,6 @@ namespace TransIT.DAL.Models.Entities
 
         public virtual User Create { get; set; }
         public virtual User Mod { get; set; }
-        
         public virtual ICollection<Supplier> Supplier { get; set; }
     }
 }

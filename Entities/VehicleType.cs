@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class VehicleType : IEntity
+    public partial class VehicleType
     {
         public VehicleType()
         {

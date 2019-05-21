@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class IssueLog : IEntity
+    public partial class IssueLog
     {
         public IssueLog()
         {
@@ -14,11 +13,11 @@ namespace TransIT.DAL.Models.Entities
         public int Id { get; set; }
         public string Description { get; set; }
         public decimal? Expenses { get; set; }
-        public int? OldStateId { get; set; }
-        public int? NewStateId { get; set; }
+        public int OldStateId { get; set; }
+        public int NewStateId { get; set; }
         public int? SupplierId { get; set; }
-        public int? ActionTypeId { get; set; }
-        public int? IssueId { get; set; }
+        public int ActionTypeId { get; set; }
+        public int IssueId { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ModDate { get; set; }
         public int? CreateId { get; set; }

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TransIT.DAL.Models.Entities.Abstractions;
 
-namespace TransIT.DAL.Models.Entities
+namespace TransIT.API.Models.Entities
 {
-    public partial class State : IEntity
+    public partial class State
     {
         public State()
         {
@@ -24,8 +23,6 @@ namespace TransIT.DAL.Models.Entities
         public int? ModId { get; set; }
         public bool IsFixed { get; set; }
 
-        public virtual User Create { get; set; }
-        public virtual User Mod { get; set; }
         public virtual ICollection<Issue> Issue { get; set; }
         public virtual ICollection<IssueLog> IssueLogNewState { get; set; }
         public virtual ICollection<IssueLog> IssueLogOldState { get; set; }
